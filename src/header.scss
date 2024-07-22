@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: darkslategray;
+    align-items: center;
+    justify-content: space-between;
+    color: lightyellow;
+    margin-bottom: 1em;
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 0 1em;
+    }
+}
