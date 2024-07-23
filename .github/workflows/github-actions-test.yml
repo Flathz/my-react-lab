@@ -33,3 +33,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+      - name: Afficher le contenu du répertoire courant
+        run: ls -la
