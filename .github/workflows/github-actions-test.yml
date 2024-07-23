@@ -2,7 +2,8 @@ name: React.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - '*'
   pull_request:
     branches: [ "main" ]
 
@@ -32,4 +33,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
+
+      - name: Afficher le contenu du répertoire courant
+        run: ls -la
