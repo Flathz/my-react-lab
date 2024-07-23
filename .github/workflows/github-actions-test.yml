@@ -3,9 +3,9 @@ name: React.js CI
 on:
   push:
     branches:
-      - '*'
+      - "*"
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-lint:
@@ -23,7 +23,7 @@ jobs:
         run: bun install
 
       - name: Linter le code
-        run: bun run lint  # Adapte la commande si nécessaire
+        run: bun run lint # Adapte la commande si nécessaire
 
       - name: Construire l'application
         run: bun run build # Adapte la commande si nécessaire
@@ -37,3 +37,6 @@ jobs:
 
       - name: Afficher le contenu du répertoire courant
         run: ls -la
+    permissions:
+      deployments: write
+      contents: write
