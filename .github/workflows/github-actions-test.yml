@@ -19,7 +19,7 @@ jobs:
           bun-version: latest # Ou spécifie une version précise
 
       - name: Installer les dépendances
-        run: bun ci
+        run: bun install
 
       - name: Linter le code
         run: bun run lint  # Adapte la commande si nécessaire
