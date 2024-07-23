@@ -1,14 +1,19 @@
-import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 import App from "./App";
-import Canvas from "./components/Canvas";
 import Header from "./Header";
+import Three from "./components/Three";
 
 const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route element={<Header />}>
-            <Route path="/" element={<App />}></Route>
-            <Route path="/canvas" element={<Canvas />}></Route>
-        </Route>
-    ));
+  createRoutesFromElements(
+    <Route element={<Header />}>
+      <Route path="/" element={<App />}></Route>
+      <Route path="/three" element={<Three />}></Route>
+    </Route>
+  )
+);
 
 export default router;
