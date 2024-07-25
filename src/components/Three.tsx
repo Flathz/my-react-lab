@@ -1,20 +1,14 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
 import { Car } from "../models/Car";
+import { OrbitControls } from "@react-three/drei";
 
 function Three() {
   return (
     <Canvas eventPrefix="layer">
-      <Suspense fallback={null}>
-        <mesh>
-          <meshStandardMaterial />
-          <ambientLight/>
-          <directionalLight position={[0, 3, 4]} />
-          <Car />
-          <OrbitControls />
-        </mesh>
-      </Suspense>
+      <ambientLight intensity={1} />
+      <directionalLight color="white" position={[0, 0, 5]} />
+      <Car position={[0, -5,-7]} />
+      <OrbitControls enableZoom={false} />
     </Canvas>
   );
 }
