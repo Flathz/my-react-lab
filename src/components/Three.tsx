@@ -1,16 +1,15 @@
 import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
+import { Environment, OrbitControls } from "@react-three/drei";
 
 function Three() {
   return (
-    <div>
-      <Canvas>
-        <ambientLight />
-        <mesh>
-          <boxGeometry args={[3,4,4]} />
-          <meshStandardMaterial />
-        </mesh>
-      </Canvas>
-    </div>
+    <Canvas>
+      <Suspense fallback={null}>
+        <Environment preset="city" background />
+        <OrbitControls />
+      </Suspense>
+    </Canvas>
   );
 }
 
