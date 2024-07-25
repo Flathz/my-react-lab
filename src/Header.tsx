@@ -10,7 +10,7 @@ function Header() {
                 </Link>
                 <div>
                     <Link to={'/three'}>
-                        <button>Three</button>
+                        <button>Car demo</button>
                     </Link>
                 </div>
             </nav>
