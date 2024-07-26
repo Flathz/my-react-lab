@@ -9,8 +9,8 @@ function Header() {
                     <h2>My React Lab</h2>
                 </Link>
                 <div>
-                    <Link to={'/canvas'}>
-                        <button>Canvas</button>
+                    <Link to={'/three'}>
+                        <button>Car demo</button>
                     </Link>
                 </div>
             </nav>
